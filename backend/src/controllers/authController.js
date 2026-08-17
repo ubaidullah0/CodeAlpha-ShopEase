@@ -6,6 +6,14 @@ exports.register = async (req, res) => {
     try {
         const { name, email, password } = req.body;
 
+        // Basic Validation
+        if (!name || !email || !password) {
+            return res.status(400).json({ error: 'Please enter all fields' });
+        }
+        if (password.length < 6) {
+            return res.status(400).json({ error: 'Password must be at least 6 characters' });
+        }
+
         // Check if user exists
         const userCheck = await pool.query('SELECT * FROM users WHERE email = $1', [email]);
         if (userCheck.rows.length > 0) {

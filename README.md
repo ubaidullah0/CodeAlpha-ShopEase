@@ -17,6 +17,15 @@ A complete, professional, responsive Simple E-commerce Store built for CodeAlpha
 
 ## Setup Instructions
 
+### Security & Environment Variables
+The application requires sensitive credentials to run. These must **never** be committed to GitHub.
+1. Create a `.env` file in the `backend` directory (do not commit this file).
+2. Copy the contents of `backend/.env.example` into `.env`.
+3. Replace the placeholder values with your real credentials:
+   - `DATABASE_URL`: Your private PostgreSQL connection string.
+   - `JWT_SECRET`: A long, randomly generated string used to sign auth tokens.
+4. If a secret is ever accidentally committed, **immediately revoke and regenerate it**.
+
 ### Backend Setup
 1. Open the `backend` directory.
 2. Install dependencies: `npm install`.
