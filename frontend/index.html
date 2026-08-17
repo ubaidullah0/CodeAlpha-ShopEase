@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopEase - Simple E-commerce Store</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">ShopEase</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="cart.html" class="cart-icon">
+                🛒 <span id="cart-count" class="hidden">0</span>
+            </a>
+            <span class="auth-logged-in hidden">
+                <a href="orders.html">My Orders</a>
+                <a href="#" id="logout-btn">Logout (<span id="user-name-display"></span>)</a>
+            </span>
+            <span class="auth-logged-out">
+                <a href="login.html">Login</a>
+                <a href="register.html" class="btn btn-primary" style="padding: 0.5rem 1rem;">Register</a>
+            </span>
+        </div>
+    </nav>
+
+    <main>
+        <section style="text-align: center; padding: 4rem 0; background-color: white; border-radius: 8px; margin-bottom: 3rem; box-shadow: var(--shadow-sm);">
+            <h1 style="font-size: 3rem; margin-bottom: 1rem; color: var(--primary-color);">Welcome to ShopEase</h1>
+            <p style="font-size: 1.2rem; color: var(--text-light); max-width: 600px; margin: 0 auto 2rem;">
+                Your one-stop shop for everything you need. Quality products, fast shipping, and excellent customer service.
+            </p>
+            <a href="products.html" class="btn btn-primary" style="font-size: 1.1rem;">Shop Now</a>
+        </section>
+
+        <section>
+            <h2>Featured Products</h2>
+            <div id="featured-products" class="product-grid">
+                <!-- Products dynamically loaded here -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 ShopEase. CodeAlpha Project.</p>
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/products.js"></script>
+</body>
+</html>

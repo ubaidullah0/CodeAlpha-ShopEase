@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - ShopEase</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">ShopEase</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="products.html" style="color: var(--primary-color);">Products</a>
+            <a href="cart.html" class="cart-icon">
+                🛒 <span id="cart-count" class="hidden">0</span>
+            </a>
+            <span class="auth-logged-in hidden">
+                <a href="orders.html">My Orders</a>
+                <a href="#" id="logout-btn">Logout</a>
+            </span>
+            <span class="auth-logged-out">
+                <a href="login.html">Login</a>
+                <a href="register.html" class="btn btn-primary" style="padding: 0.5rem 1rem;">Register</a>
+            </span>
+        </div>
+    </nav>
+
+    <main>
+        <h1>Our Products</h1>
+        <div id="products-grid" class="product-grid">
+            <!-- Products dynamically loaded here -->
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 ShopEase. CodeAlpha Project.</p>
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/products.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - ShopEase</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">ShopEase</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="cart.html" class="cart-icon" style="color: var(--primary-color);">
+                🛒 <span id="cart-count" class="hidden">0</span>
+            </a>
+            <span class="auth-logged-in hidden">
+                <a href="orders.html">My Orders</a>
+                <a href="#" id="logout-btn">Logout</a>
+            </span>
+            <span class="auth-logged-out">
+                <a href="login.html">Login</a>
+                <a href="register.html" class="btn btn-primary" style="padding: 0.5rem 1rem;">Register</a>
+            </span>
+        </div>
+    </nav>
+
+    <main>
+        <h1>Shopping Cart</h1>
+        <div style="display: grid; grid-template-columns: 1fr; gap: 2rem;">
+            <div id="cart-container" style="background-color: var(--white); border-radius: var(--border-radius); box-shadow: var(--shadow-sm); padding: 1rem;">
+                <!-- Cart items loaded here -->
+            </div>
+            
+            <div id="cart-summary" class="cart-summary hidden" style="align-self: start;">
+                <h3>Order Summary</h3>
+                <div style="display: flex; justify-content: space-between; margin-top: 1rem;">
+                    <span>Subtotal</span>
+                    <span id="cart-subtotal">$0.00</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; margin-top: 1rem; font-weight: bold; font-size: 1.2rem; border-top: 1px solid var(--border-color); padding-top: 1rem;">
+                    <span>Total</span>
+                    <span id="cart-total">$0.00</span>
+                </div>
+                <a href="checkout.html" class="btn btn-primary btn-block mt-2">Proceed to Checkout</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 ShopEase. CodeAlpha Project.</p>
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html>

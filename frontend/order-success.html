@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Success - ShopEase</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">ShopEase</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="cart.html" class="cart-icon">
+                🛒 <span id="cart-count" class="hidden">0</span>
+            </a>
+            <span class="auth-logged-in hidden">
+                <a href="orders.html">My Orders</a>
+                <a href="#" id="logout-btn">Logout</a>
+            </span>
+        </div>
+    </nav>
+
+    <main style="display: flex; justify-content: center; align-items: center; min-height: 60vh;">
+        <div style="text-align: center; background-color: var(--white); padding: 3rem; border-radius: var(--border-radius); box-shadow: var(--shadow-sm); max-width: 500px;">
+            <div style="font-size: 4rem; color: var(--success-color); margin-bottom: 1rem;">✅</div>
+            <h1 style="margin-bottom: 1rem;">Order Successful!</h1>
+            <p style="color: var(--text-light); margin-bottom: 2rem;">Thank you for your purchase. Your order has been placed successfully and is now being processed.</p>
+            <p id="order-id-display" style="font-weight: bold; margin-bottom: 2rem;"></p>
+            <a href="orders.html" class="btn btn-primary" style="margin-right: 1rem;">View Orders</a>
+            <a href="products.html" class="btn btn-outline">Continue Shopping</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 ShopEase. CodeAlpha Project.</p>
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/cart.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const orderId = urlParams.get('id');
+            if (orderId) {
+                document.getElementById('order-id-display').textContent = `Order ID: #${orderId}`;
+            }
+        });
+    </script>
+</body>
+</html>
