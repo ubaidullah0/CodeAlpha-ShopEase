@@ -1,3 +1,15 @@
+// Toggle Password Visibility
+window.togglePassword = function(inputId, btn) {
+    const input = document.getElementById(inputId);
+    if (input.type === 'password') {
+        input.type = 'text';
+        btn.textContent = 'Hide';
+    } else {
+        input.type = 'password';
+        btn.textContent = 'Show';
+    }
+};
+
 document.addEventListener('DOMContentLoaded', () => {
     // Register Form
     const registerForm = document.getElementById('register-form');

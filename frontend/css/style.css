@@ -362,6 +362,26 @@ footer {
 .mt-2 { margin-top: 1rem; }
 .mb-2 { margin-bottom: 1rem; }
 
+/* Password Toggle */
+.password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.password-toggle {
+    position: absolute;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-light);
+    font-weight: bold;
+    font-size: 0.85rem;
+}
+.password-container .form-control {
+    padding-right: 60px;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .product-details {
