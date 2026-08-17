@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     <div class="card-category">${product.category || 'General'}</div>
                     <h3 class="card-title">${product.name}</h3>
                     <div class="card-price">$${Number(product.price).toFixed(2)}</div>
-                    <a href="product-details.html?id=${product.id}" class="btn btn-primary btn-block">View Details</a>
+                    <a href="product-details.html?id=${product.id}" onclick="localStorage.setItem('selectedProductId', ${product.id})" class="btn btn-primary btn-block">View Details</a>
                 </div>
             </div>
         `;
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Load single product details
     if (productDetailsContainer) {
         const urlParams = new URLSearchParams(window.location.search);
-        const productId = urlParams.get('id');
+        const productId = urlParams.get('id') || localStorage.getItem('selectedProductId');
 
         if (!productId) {
             productDetailsContainer.innerHTML = '<p>Product not found.</p>';
