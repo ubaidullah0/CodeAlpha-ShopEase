@@ -1,5 +1,5 @@
 // API Configuration
-const API_BASE_URL = 'http://localhost:3000/api'; // Change this for production
+const API_BASE_URL = 'https://codealpha-shopease-lic7.onrender.com/api'; // Change this for production
 
 // Helper for making authenticated requests
 async function fetchAPI(endpoint, options = {}) {
